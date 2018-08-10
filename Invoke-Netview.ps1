@@ -1,3 +1,5 @@
+# This is alpha code
+
 $VerbosePreference = "SilentlyContinue"
 $searchForGoods = $false
 $shares = $null
@@ -15,7 +17,6 @@ $computers = (net view | Select-String -Pattern '(?<=^\\\\)\w+').Matches.Value
 $computers = ""
 
 cls
-
 
 function Write-ToScreen{
 [cmdletbinding()]
@@ -67,9 +68,6 @@ Param
         }					
     }    
 }
-
-
-
 
 Write-ToScreen -Type Title -Message "Searching with Net view"
 
